@@ -1,0 +1,59 @@
+{
+    "name": "frostaly/data",
+    "description": "The frostaly data component.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "frostaly",
+        "data"
+    ],
+    "support": {
+        "issues": "https://github.com/frostaly/data/issues",
+        "source": "https://github.com/frostaly/data"
+    },
+    "require": {
+        "php": "^8.1",
+        "frostaly/var-exporter": "dev-master",
+        "psr/container": "^2.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "willdurand/negotiation": "^3.1"
+    },
+    "require-dev": {
+        "frostaly/template": "dev-master",
+        "laminas/laminas-coding-standard": "^2.3",
+        "nyholm/psr7": "^1.5",
+        "phpstan/phpstan": "^1.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frostaly\\Data\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Frostaly\\Data\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@phpcs",
+            "@phpunit",
+            "@phpstan"
+        ],
+        "phpcs": "phpcs",
+        "phpunit": "XDEBUG_MODE=coverage phpunit",
+        "phpstan": "phpstan analyse"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
